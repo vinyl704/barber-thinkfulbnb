@@ -42,7 +42,7 @@ main img {
 
 header {
   background-color: #ff385c;
-  padding: 20px 20px 0 20px;
+  padding: 20px 20px 0px 20px;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
@@ -61,7 +61,6 @@ header nav ul{
   display:flex;
   flex-direction: row;
   justify-content: center;
-  padding-bottom: 20px;
   
 }
 
@@ -113,7 +112,6 @@ form button {
   font-size: 24px;
   padding: 15px;
   width: 100%;
-  text-align: center;
 }
 
 /* -------  Footer ------- */
@@ -134,30 +132,80 @@ footer p {
 /* -------  Media Query ------- */
 @media all and (min-width:480px){
   
-
-  form{
+  /*Header style rules*/
+  header{
+    display:flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    text-align: center;
+    padding:20px 10px;
+    
   }
+  
 
+/*Form style rules*/
+  form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    margin:15px 22px;
+    padding:10px;
+  }
+  form input,form select{
+    margin:0;
+  }
   
   .form-item{
     flex-direction: column;
+    flex:content;
+    justify-content: center;
+    align-items: flex-start;
+    
   }
 
-  #host{
-    align-items: center;
-  }
+ 
 
-
-  header{
+  /*ideas style rules*/
+.imgContainer{
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-  
+  width:100%;
+  justify-content: center;
 }
+
+
+.places{
+  
+  margin: 10px;
+  flex:40%;
+}
+
+.places h3{
+  margin-top:10px;
+
+}
+
+  /* Host section */
+  #host{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 20px;
+  }
+  
+  #host div{
+    flex:1;
+    padding:10px;
+  }
+
+ 
+
+
+
 
 
  /* ---  Groups & Items --- */
@@ -177,26 +225,5 @@ footer p {
 .item-double {
   flex: 2;
 }
-
-.imgContainer{
-  display:flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
- margin: auto;
-}
-
-
-.places{
-  
-  margin: 10px;
-  flex:0 40%;
-}
-
-.places h3{
-  margin:10px;
-  padding:2px;
-}
-
 
 }
